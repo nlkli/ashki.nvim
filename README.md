@@ -27,7 +27,6 @@ require("ashki").load()
 
 ### Setup Params
 
-
 ```lua
 require("ashki").setup({ 
     soft = true, -- reduce contrast
