@@ -1,1 +1,0 @@
-require("ashki")._colorscheme()
