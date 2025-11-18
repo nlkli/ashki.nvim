@@ -36,7 +36,6 @@ local defaults = {
 
 M.setup = function(user_opts)
     M.opts = vim.tbl_deep_extend("force", defaults, user_opts or {})
-    vim.g.colors_name = "ashki"
 end
 
 M.set_highlights = function()
