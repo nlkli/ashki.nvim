@@ -1,9 +1,5 @@
 # Ashki Theme for Neovim
 
-Ashki is a dark, minimal color scheme for Neovim with soft contrast and vibrant syntax highlighting.
-
-## Preview
-
 ![Ashki Preview](https://github.com/nlkli/ashki.nvim/blob/main/preview.png)  
 
 ## Installation
@@ -25,7 +21,7 @@ vim.cmd("colorscheme ashki")
 }
 ```
 
-# Ashki Theme Color Palette
+### Ashki Theme Color Palette
 
 | Name    | Hex     |                RGB |
 | ------- | ------- | -----------------: |
