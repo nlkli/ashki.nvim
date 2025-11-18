@@ -14,7 +14,7 @@ require("ashki").setup(opt)
 vim.cmd("colorscheme ashki")
 ```
 
-### Using `lazy.nvim` or `packer.nvim`
+### Using `lazy.nvim`
 
 ```lua
 {
