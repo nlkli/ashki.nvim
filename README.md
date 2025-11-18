@@ -17,9 +17,12 @@ require("ashki").load() -- or vim.cmd("colorscheme ashki")
 ```lua
 {
   "nlkli/ashki.nvim",
+  lazy = false,
+  priority = 1000,
   config = function()
+    require("ashki").setup()
     require("ashki").load()
-  end
+  end,
 }
 ```
 
