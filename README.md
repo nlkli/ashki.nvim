@@ -2,6 +2,8 @@
 
 ![Ashki Preview](https://github.com/nlkli/ashki.nvim/blob/main/preview.png)  
 
+A minimal dark Neovim color scheme.
+
 ## Installation
 
 ```lua
