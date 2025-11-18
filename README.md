@@ -21,7 +21,7 @@ vim.cmd("colorscheme ashki")
 }
 ```
 
-### Ashki Theme Color Palette
+### Color Palette
 
 | Name    | Hex     |                RGB |
 | ------- | ------- | -----------------: |
