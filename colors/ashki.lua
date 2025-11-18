@@ -1,1 +1,1 @@
-lua require("ashki")._colorscheme()
+require("ashki")._colorscheme()
