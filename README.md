@@ -8,7 +8,7 @@ A minimal dark Neovim color scheme.
 
 ```lua
 vim.pack.add({ "https://github.com/nlkli/ashki.nvim" })
-require("ashki").setup(opt)
+require("ashki").setup()
 require("ashki").load()
 -- vim.cmd("colorscheme ashki")
 ```
