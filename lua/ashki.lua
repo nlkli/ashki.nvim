@@ -1,10 +1,12 @@
 local M = {}
 
 local defaults = {
+    soft = false,
+    terminal = false,
     colors = {
         void = "#000000",
-        bg1 = "#0A0908",
-        bg2 = "#1D1B18",
+        bg1 = "#0D0D0D",
+        bg2 = "#1F1D1A",
         bg3 = "#302D28",
         visual = "#201E1A",
         cursor = "#F0F7FA",
@@ -31,6 +33,13 @@ local defaults = {
         bluebg = "#273240",
         violetbg = "#23202C",
         pinkbg = "#492A3C",
+    },
+    alt = {
+        void = "#080705",
+        bg1 = "#0F0E0C",
+        bg2 = "#1F1D1B",
+        bg3 = "#33302B",
+        visual = "#23211D",
     }
 }
 
@@ -41,22 +50,28 @@ end
 M.set_highlights = function()
     local c = M.opts.colors
 
-    vim.g.terminal_color_0 = c.void
-    vim.g.terminal_color_1 = c.red
-    vim.g.terminal_color_2 = c.green
-    vim.g.terminal_color_3 = c.yellow
-    vim.g.terminal_color_4 = c.blue
-    vim.g.terminal_color_5 = c.violet
-    vim.g.terminal_color_6 = c.pink
-    vim.g.terminal_color_7 = c.fg
-    vim.g.terminal_color_8 = c.comment
-    vim.g.terminal_color_9 = c.redbg
-    vim.g.terminal_color_10 = c.greenbg
-    vim.g.terminal_color_11 = c.yellowbg
-    vim.g.terminal_color_12 = c.bluebg
-    vim.g.terminal_color_13 = c.violetbg
-    vim.g.terminal_color_14 = c.pinkbg
-    vim.g.terminal_color_15 = c.bg3
+    if M.opts.soft then
+        c = vim.tbl_deep_extend("force", c, M.opts.alt)
+    end
+
+    if M.opts.terminal then
+        vim.g.terminal_color_0 = c.void
+        vim.g.terminal_color_1 = c.red
+        vim.g.terminal_color_2 = c.green
+        vim.g.terminal_color_3 = c.yellow
+        vim.g.terminal_color_4 = c.blue
+        vim.g.terminal_color_5 = c.violet
+        vim.g.terminal_color_6 = c.pink
+        vim.g.terminal_color_7 = c.fg
+        vim.g.terminal_color_8 = c.comment
+        vim.g.terminal_color_9 = c.redbg
+        vim.g.terminal_color_10 = c.greenbg
+        vim.g.terminal_color_11 = c.yellowbg
+        vim.g.terminal_color_12 = c.bluebg
+        vim.g.terminal_color_13 = c.violetbg
+        vim.g.terminal_color_14 = c.pinkbg
+        vim.g.terminal_color_15 = c.bg3
+    end
 
     local hi = function(name, val)
         vim.api.nvim_set_hl(0, name, val)
