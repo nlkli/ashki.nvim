@@ -30,7 +30,7 @@ require("ashki").load()
 ```lua
 require("ashki").setup({ 
     soft = true, -- reduce contrast
-    terminal = true, -- dont set terminal colors
+    terminal = true, -- set terminal colors
     colors = { -- set custom colors
         void = "#080705",
         cursor = "#E8E8DF",
