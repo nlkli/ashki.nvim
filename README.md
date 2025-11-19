@@ -1,6 +1,6 @@
 # Ashki Theme for Neovim
 
-![Ashki Preview](https://github.com/nlkli/ashki.nvim/blob/main/preview.png)  
+![Ashki Preview](https://github.com/nlkli/assetsrepo/blob/main/ashki.nvim/preview_rust.png)  
 
 A minimal dark Neovim color scheme. Total black background.
 
