@@ -41,6 +41,10 @@ require("ashki").setup({
 })
 ```
 
+![Ashki Preview Go](https://github.com/nlkli/assetsrepo/blob/main/ashki.nvim/preview_go.png)  
+
+![Ashki Preview HTML](https://github.com/nlkli/assetsrepo/blob/main/ashki.nvim/preview_html.png)  
+
 ## Color Palette
 
 | Name      | Hex       | Description                       |
