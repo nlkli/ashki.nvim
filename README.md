@@ -43,8 +43,6 @@ require("ashki").setup({
 
 ## Color Palette
 
----
-
 | Name      | Hex       | Description                       |
 |-----------|-----------|-----------------------------------|
 | **Backgrounds** |           |                                   |
