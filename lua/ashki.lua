@@ -100,7 +100,7 @@ M.set_highlights = function()
 
     -- Apply soft background variant
     if M.opts.soft > 0 then
-        if M.opts.soft <= 2 then 
+        if M.opts.soft <= 2 then
             c = vim.tbl_deep_extend("force", c, M.opts.soft_bg[M.opts.soft])
         else
             c = vim.tbl_deep_extend("force", c, M.opts.soft_bg[2])
@@ -151,6 +151,11 @@ M.set_highlights = function()
     hi("Question", { fg = c.pink }) -- Prompt question messages
     hi("Debug", { fg = c.blue }) -- Debug messages
     hi("debugPc", { fg = c.void, bg = c.fg }) -- Debug PC pointer
+    hi("Search", { bg = c.bg2, fg = c.fg, bold = true })
+    hi("CurSearch", { bg = c.bg2, fg = c.fg01, bold = true })
+    hi("IncSearch", { bg = c.bg3, fg = c.fg01, bold = true })
+    hi("Directory", { fg = c.fg1 })
+    hi("Title", { fg = c.string })
 
     -- =========================
     -- Syntax Elements
