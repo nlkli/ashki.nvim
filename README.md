@@ -2,7 +2,7 @@
 
 ![Ashki Preview](https://github.com/nlkli/ashki.nvim/blob/main/preview.png)  
 
-A minimal dark Neovim color scheme.
+A minimal dark Neovim color scheme. Total black background.
 
 ## Installation
 
@@ -30,8 +30,9 @@ require("ashki").load() -- or vim.cmd("colorscheme ashki")
 
 ```lua
 require("ashki").setup({ 
-    soft = true, -- reduce contrast
+    soft = 0, -- soft lvl 0..=2
     terminal = true, -- set terminal colors
+    ak = "r", -- keyword color preset r|g|b|y|o|v|p
     colors = { -- set custom colors
         void = "#080705",
         cursor = "#E8E8DF",
@@ -40,31 +41,37 @@ require("ashki").setup({
 })
 ```
 
-### Color Palette
+## Color Palette
 
-| Name    | Hex     |                RGB |
-| ------- | ------- | -----------------: |
-| void    | #000000 |       rgb(0, 0, 0) |
-| bg1     | #0A0908 |      rgb(10, 9, 8) |
-| bg2     | #1D1B18 |    rgb(29, 27, 24) |
-| bg3     | #302D28 |    rgb(48, 45, 40) |
-| visual  | #201E1A |    rgb(32, 30, 26) |
-| cursor  | #F0F7FA | rgb(240, 247, 250) |
-| fg01    | #DCE9FB | rgb(220, 233, 251) |
-| fg      | #D2D1D0 | rgb(210, 209, 208) |
-| fg1     | #A6A4A2 | rgb(166, 164, 162) |
-| fg2     | #7A7775 | rgb(122, 119, 117) |
-| fg3     | #494949 |    rgb(73, 73, 73) |
-| sline   | #4C4B49 |    rgb(76, 75, 73) |
-| string  | #66A0A7 | rgb(102, 160, 167) |
-| keyword | #A94646 |   rgb(169, 70, 70) |
-| func    | #8E8EB4 | rgb(142, 142, 180) |
-| ttype   | #C7C1A9 | rgb(199, 193, 169) |
-| const   | #86A1CF | rgb(134, 161, 207) |
-| red     | #9E4941 |   rgb(158, 73, 65) |
-| green   | #336C62 |   rgb(51, 108, 98) |
-| yellow  | #DEB65B |  rgb(222, 182, 91) |
-| blue    | #748CAB | rgb(116, 140, 171) |
-| violet  | #61587A |   rgb(97, 88, 122) |
-| pink    | #BA86A4 | rgb(186, 134, 164) |
+---
+
+| Name      | Hex       | Description                       |
+|-----------|-----------|-----------------------------------|
+| **Backgrounds** |           |                                   |
+| void      | #000000   | Normal background                 |
+| bg1       | #0D0D0D   | Main text background              |
+| bg2       | #1F1D1A   | CursorLine / floating windows     |
+| bg3       | #302D28   | Fold / popup / diff background   |
+| visual    | #201E1A   | Visual selection                  |
+| cursor    | #F0F7FA   | Cursor color                      |
+| sline     | #4C4B49   | StatusLine background             |
+| **Foreground Shades** |   |                                   |
+| fg01      | #DCE9FB   | Light highlight text              |
+| fg        | #CFCFCC   | Normal text                       |
+| fg1       | #ABA9A8   | LineNr / CursorLineNr             |
+| fg2       | #7A7775   | Fold / StatusLineNC               |
+| fg3       | #494949   | Comments / NonText / EndOfBuffer |
+| **Syntax Colors** |       |                                   |
+| string    | #679CA2   | Strings                           |
+| keyword   | #A94646   | Keywords                          |
+| func      | #8E8EB4   | Functions                         |
+| ttype     | #C8C3AB   | Types                             |
+| const     | #86A1CF   | Constants                         |
+| **Semantic / Special** |   |                                   |
+| red       | #9E4941   | Red color                         |
+| green     | #336C62   | Green color                       |
+| yellow    | #D9B35B   | Yellow color                      |
+| blue      | #748CAB   | Blue color                         |
+| violet    | #61587A   | Violet color                      |
+| pink      | #BA86A4   | Pink color                         |
 
